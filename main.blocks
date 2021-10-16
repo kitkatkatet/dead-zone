@@ -4,15 +4,15 @@
 . . . 2 . . . . . . . . . . . . 
 . . . 2 2 2 2 2 2 2 2 2 2 . . . 
 . . . 2 2 . 2 2 2 2 2 2 . . . . 
-. . 2 2 2 2 . e e e e e . . . . 
-. . 2 2 2 e e e 2 . e e . . . . 
-. 2 2 2 2 e e e e e . . . . . . 
-. 2 2 2 2 e e e e . . . . . . . 
-. . . . . 2 2 2 2 2 2 . . . . . 
-. 2 2 2 2 2 2 2 3 . . . . . . . 
-. . 2 2 2 2 . . . . . . . . . . 
+. . 3 2 2 2 . e e e e e . . . . 
+7 7 7 7 7 e e e 2 . e e . . . . 
+7 7 7 7 7 e e e e e . . . . . . 
+. 2 3 3 2 e e e e . . . . . . . 
+. . . 3 . 2 2 2 2 2 2 . . . . . 
+. 2 2 3 3 2 2 2 3 . . . . . . . 
+. . 2 3 3 2 . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-`</field><data>{"commentRefs":[],"fieldData":{"img":"Ym|quxsVvl*4OlA`!DHI"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="79Vd6XY*!2Tni7W|z])c"><field name="MEMBER">Player</field></shadow></value></block></value></block></statement></block></xml>
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="79Vd6XY*!2Tni7W|z])c"><field name="MEMBER">Player</field></shadow></value></block></value></block></statement></block></xml>
