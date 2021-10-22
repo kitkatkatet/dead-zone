@@ -6,7 +6,31 @@ namespace SpriteKind {
     export const wood = SpriteKind.create()
 }
 function woodBoard () {
-	
+    for (let value of tiles.getTilesByType(assets.tile`myTile5`)) {
+        woodSign = sprites.create(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            e e e 9 e e e e e e e e e e e e 
+            e d 9 e e e e e e e e e e e e e 
+            9 9 d 9 d 2 d e 2 d 8 d d 9 d e 
+            e d e e e e e e e e e e e e e e 
+            e e 8 e d d 8 d 2 d 8 e d 2 d e 
+            e d e d e e e e e e d d e e e e 
+            e e e e e e e e e e e e e e e e 
+            . . . . . . 9 9 e e . . . . . . 
+            . . . . . . e f 9 9 . . . . . . 
+            . . . . . . e e 9 e . . . . . . 
+            . . . . . . e 9 e e . . . . . . 
+            . . . . . . 9 f e e . . . . . . 
+            `, SpriteKind.wood)
+        tiles.setTileAt(value, assets.tile`myTile5`)
+        tiles.placeOnTile(woodSign, value)
+    }
+    if (triangle.overlapsWith(woodSign)) {
+        game.splash("damn what a splash you made, well atleast your here now.")
+    }
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (triangle.vy == 0) {
@@ -76,7 +100,6 @@ function enemy () {
     }
 }
 function portal2 () {
-    let woodSign: Sprite = null
     for (let value of tiles.getTilesByType(assets.tile`myTile2`)) {
         portal = sprites.create(img`
             . . . . . . . . . . . . . . . . 
@@ -215,6 +238,7 @@ let portal: Sprite = null
 let sharkEgg: Sprite = null
 let sharkEnemy: Sprite = null
 let triangle: Sprite = null
+let woodSign: Sprite = null
 scene.setBackgroundColor(1)
 tiles.setTilemap(tilemap`level1`)
 scene.setBackgroundImage(img`
