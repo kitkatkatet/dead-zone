@@ -25,7 +25,7 @@ function woodBoard () {
             . . . . . . e 9 e e . . . . . . 
             . . . . . . 9 f e e . . . . . . 
             `, SpriteKind.wood)
-        tiles.setTileAt(value, assets.tile`myTile5`)
+        tiles.setTileAt(value, assets.tile`transparency16`)
         tiles.placeOnTile(woodSign, value)
     }
     if (triangle.overlapsWith(woodSign)) {
@@ -122,14 +122,11 @@ function portal2 () {
         tiles.setTileAt(value, assets.tile`transparency16`)
         tiles.placeOnTile(portal, value)
     }
-    if (triangle.overlapsWith(woodSign)) {
-        game.splash("damn what a splash you made, well atleast your here now.", "help collect the plastic bottles and get to the end.")
+    if (triangle.overlapsWith(portal)) {
+        current_level += 1
+        firstLevel()
     }
 }
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, location) {
-    current_level += 1
-    firstLevel()
-})
 function litterCollect () {
     for (let value of tiles.getTilesByType(assets.tile`myTile4`)) {
         waterBottle = sprites.create(img`
@@ -221,8 +218,6 @@ function firstLevel () {
     }
     triangle.ay = 350
     scene.cameraFollowSprite(triangle)
-    info.setScore(0)
-    info.setLife(5)
     woodBoard()
     litterCollect()
     enemy()
@@ -233,12 +228,12 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
     sharkEnemy.destroy()
 })
 let waterBottle: Sprite = null
-let current_level = 0
 let portal: Sprite = null
 let sharkEgg: Sprite = null
 let sharkEnemy: Sprite = null
 let triangle: Sprite = null
 let woodSign: Sprite = null
+let current_level = 0
 scene.setBackgroundColor(1)
 tiles.setTilemap(tilemap`level1`)
 scene.setBackgroundImage(img`
@@ -364,6 +359,9 @@ scene.setBackgroundImage(img`
     2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
     `)
 firstLevel()
+info.setScore(0)
+info.setLife(5)
+current_level = 0
 game.onUpdate(function () {
 	
 })
